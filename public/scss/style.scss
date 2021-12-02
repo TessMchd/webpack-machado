@@ -1,0 +1,128 @@
+.container {
+  width: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "carte1 carte2 carte3 carte4"
+    "carte5 carte6 carte7 carte8"
+    "carte9 carte10 carte11 carte12"
+    "carte13 carte14 carte15 carte16";
+
+  .carte1 {
+    grid-area: carte1;
+  }
+
+  .carte2 {
+    grid-area: carte2;
+  }
+
+  .carte3 {
+    grid-area: carte3;
+  }
+
+  .carte4 {
+    grid-area: carte4;
+  }
+
+  .carte5 {
+    grid-area: carte5;
+  }
+
+  .carte6 {
+    grid-area: carte6;
+  }
+
+  .carte7 {
+    grid-area: carte7;
+  }
+
+  .carte8 {
+    grid-area: carte8;
+  }
+
+  .carte9 {
+    grid-area: carte9;
+  }
+
+  .carte10 {
+    grid-area: carte10;
+  }
+
+  .carte11 {
+    grid-area: carte11;
+  }
+
+  .carte12 {
+    grid-area: carte12;
+  }
+
+  .carte13 {
+    grid-area: carte13;
+  }
+
+  .carte14 {
+    grid-area: carte14;
+  }
+
+  .carte15 {
+    grid-area: carte15;
+  }
+
+  .carte16 {
+    grid-area: carte16;
+  }
+
+  .carte {
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .carte img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+    .flip-card {
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-image : url("../../dist/images/front-image.jpg");
+      color: black;
+      background-position : center;
+      background-size : contain;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      transform: rotateY(180deg);
+    }
